@@ -1,0 +1,9 @@
+<library path="rviz_mesh_display">
+  <class name="rviz_mesh_display/Mesh"
+         type="rviz_mesh_display::MeshDisplay"
+         base_class_type="rviz_common::Display">
+    <description>
+      Load an STL/DAE/OBJ mesh file from disk and attach it to a TF frame.
+    </description>
+  </class>
+</library>
