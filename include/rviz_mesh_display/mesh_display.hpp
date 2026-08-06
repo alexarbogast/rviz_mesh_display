@@ -81,6 +81,7 @@ private:
   rviz_common::properties::TfFrameProperty* frame_property_;
   rviz_common::properties::VectorProperty* position_offset_property_;
   rviz_common::properties::VectorProperty* rpy_offset_property_;
+  rviz_common::properties::VectorProperty* scale_property_;
   rviz_common::properties::BoolProperty* use_embedded_material_property_;
   rviz_common::properties::ColorProperty* color_property_;
   rviz_common::properties::FloatProperty* alpha_property_;

@@ -88,6 +88,10 @@ MeshDisplay::MeshDisplay() : Display(), instance_id_(nextInstanceId())
       "degrees.",
       this);
 
+  scale_property_ = new rviz_common::properties::VectorProperty(
+      "Scale", Ogre::Vector3::UNIT_SCALE,
+      "Per-axis scale applied to the mesh about the model origin", this);
+
   use_embedded_material_property_ = new rviz_common::properties::BoolProperty(
       "Use Embedded Material", true,
       "Use the mesh file's own colors/materials if it has them. "
@@ -368,6 +372,7 @@ void MeshDisplay::updateTransform()
   const Ogre::Quaternion world_orientation =
       frame_orientation * offset_orientation;
 
+  scene_node_->setScale(scale_property_->getVector());
   scene_node_->setPosition(world_position);
   scene_node_->setOrientation(world_orientation);
 }
